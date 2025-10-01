@@ -740,6 +740,185 @@
             font-size: 1.1rem;
             font-weight: 500;
         }
+
+
+    .jita-conference {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #096B68 0%, #90D1CA 100%);
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-width: 900px;
+        width: 100%;
+        overflow: hidden;
+        margin: 20px auto;
+    }
+
+    .jita-conference * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .jita-header {
+        background: linear-gradient(135deg, #096B68 0%, #90D1CA 100%);
+        color: white;
+        padding: 40px 30px;
+        text-align: center;
+    }
+
+    .jita-header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .jita-header .jita-date {
+        font-size: 1.3em;
+        opacity: 0.95;
+        font-weight: 300;
+    }
+
+    .jita-content {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px 30px;
+    }
+
+    .jita-program-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 20px;
+    }
+
+    .jita-program-table thead {
+        background: linear-gradient(135deg, #096B68 0%, #90D1CA 100%);
+        color: white;
+    }
+
+    .jita-program-table th {
+        padding: 18px 20px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .jita-program-table th:first-child {
+        border-radius: 10px 0 0 0;
+    }
+
+    .jita-program-table th:last-child {
+        border-radius: 0 10px 0 0;
+    }
+
+    .jita-program-table td {
+        padding: 20px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .jita-program-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .jita-program-table tbody tr {
+        transition: all 0.3s ease;
+    }
+
+    .jita-program-table tbody tr:hover {
+        background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+        transform: translateX(5px);
+    }
+
+    .jita-time {
+        font-weight: 600;
+        color: #096B68;
+        font-size: 1.05em;
+        white-space: nowrap;
+    }
+
+    .jita-activity {
+        color: #333;
+        font-size: 1.05em;
+    }
+
+    .jita-keynote {
+        font-weight: 600;
+        color: #096B68;
+    }
+
+        .jita-papers-list {
+        margin-top: 12px;
+    }
+
+    .jita-paper-item {
+        margin-bottom: 12px;
+        padding: 12px;
+        background: linear-gradient(90deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08));
+        border-left: 3px solid #096B68;
+        border-radius: 5px;
+    }
+
+    .jita-paper-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .jita-paper-number {
+        font-weight: 700;
+        color: #096B68;
+        font-size: 0.95em;
+    }
+
+    .jita-paper-title {
+        font-weight: 600;
+        color: #333;
+        margin: 4px 0;
+    }
+
+    .jita-paper-authors {
+        font-size: 0.9em;
+        color: #666;
+        font-style: italic;
+    }
+
+    .jita-break {
+        color: #666;
+        font-style: italic;
+    }
+
+    .jita-highlight {
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .jita-header h1 {
+            font-size: 1.8em;
+        }
+
+        .jita-header .jita-date {
+            font-size: 1.1em;
+        }
+
+        .jita-program-table th,
+        .jita-program-table td {
+            padding: 12px;
+            font-size: 0.95em;
+        }
+
+                .jita-paper-item {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .jita-paper-title {
+            font-size: 0.9em;
+        }
+
+        .jita-paper-authors {
+            font-size: 0.85em;
+        }
+    }
     </style>
 </head>
 <body>
@@ -837,7 +1016,7 @@
     </section>
 
     <!-- Keynotes Section -->
-    <section id="program" class="section">
+    <section id="speakers" class="section">
         <div class="container">
             <div class="section-header">
                 <h2>Keynote Speakers</h2>
@@ -864,10 +1043,113 @@
     <!-- Program Section -->
     <section id="program" class="section">
         <div class="container">
-            <div class="section-header">
-                <h2>Conference Program</h2>
-                <!-- <p>Explore our comprehensive schedule of sessions, workshops, and networking events</p> -->
-                <p>The conference program <strong>will be announced soon</strong>. Stay tuned for a dynamic lineup of sessions, speakers, and engaging discussions.</p> 
+
+            <div class="jita-conference">
+            <div class="jita-header" id="program">
+                <h1>Conference Program</h1>
+                <div class="jita-date">October 16th, 2025</div>
+            </div>
+            
+            <div class="jita-content">
+                    <table class="jita-program-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Activity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="jita-time">9:00 - 9:15</td>
+                                <td class="jita-activity">Introduction</td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">9:15 - 10:15</td>
+                                <td class="jita-activity">
+                                    <span class="jita-keynote">Keynote 1 - Prof. Florent Capelli</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">10:15 - 10:45</td>
+                                <td class="jita-activity jita-break">Pause</td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">10:45 - 12:15</td>
+                                <td class="jita-activity">
+                                    <div>Oral Session 1</div>
+                                    <div class="jita-papers-list">
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 27</div> -->
+                                            <div class="jita-paper-title">Weighted and Non-Uniform Crossing Neighborhood in Sandpiles</div>
+                                            <div class="jita-paper-authors">Antonin Loubière, Pablo Concha-Vega, Kévin Perrot</div>
+                                        </div>
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 32</div> -->
+                                            <div class="jita-paper-title">PTOTL: Probabilistic Timed Obstruction Temporal Logic for Cost-Bounded Sabotage in Real-Time Systems</div>
+                                            <div class="jita-paper-authors">Axel OSCAR</div>
+                                        </div>
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 34</div> -->
+                                            <div class="jita-paper-title">Richer Oracle Interactions in Constraint Acquisition: Theory and Application to Program Verification</div>
+                                            <div class="jita-paper-authors">Sarra Djebour</div>
+                                        </div>
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 26</div> -->
+                                            <div class="jita-paper-title">Toward Practical Constraint Acquisition: An Anytime Learning Approach</div>
+                                            <div class="jita-paper-authors">Aicha Boukhari</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">12:15 - 13:30</td>
+                                <td class="jita-activity jita-break">Lunch</td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">13:30 - 14:30</td>
+                                <td class="jita-activity">
+                                    <span class="jita-keynote">Keynote 2 - Prof. Chengbin CHU</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">14:30 - 16:00</td>
+                                <td class="jita-activity">
+                                    <div>Oral Session 2</div>
+                                    <div class="jita-papers-list">
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 28</div> -->
+                                            <div class="jita-paper-title">Comparing the classes of Nash equilibria obtained by players using different types of quantum resources</div>
+                                            <div class="jita-paper-authors">Igor Semezies, Alastair Abbott, Mehdi Mhalla</div>
+                                        </div>
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 20</div> -->
+                                            <div class="jita-paper-title">Neural Field Turing Machine: A Differentiable Spatial Computer</div>
+                                            <div class="jita-paper-authors">Akash Malhotra, Nacera Seghouani</div>
+                                        </div>
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 35</div> -->
+                                            <div class="jita-paper-title">Mind Games Machines Play: Contrastive Cognitive Bias Detection in LLMs and Distilled Models</div>
+                                            <div class="jita-paper-authors">Anusha Asim, Maryam Rifah</div>
+                                        </div>
+                                        <div class="jita-paper-item">
+                                            <!-- <div class="jita-paper-number">Paper 25</div> -->
+                                            <div class="jita-paper-title">Symbolic Critics to Mitigate General-Purpose AI Hallucinations in Robotic Scene Interpretation</div>
+                                            <div class="jita-paper-authors">Damien Alouges, Raphaël Lallement, Matteo Morelli, Sébastien Gérard</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="jita-time">16:00 - 17:30</td>
+                                <td class="jita-activity jita-break">Poster Session and Coffee Break</td>
+                            </tr>
+                            <tr class="jita-highlight">
+                                <td class="jita-time">17:30</td>
+                                <td class="jita-activity">Best Paper and Poster Announcement</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <!-- <div class="program-grid">
                 <div class="program-card">
